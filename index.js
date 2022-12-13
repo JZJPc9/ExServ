@@ -9,7 +9,7 @@ var mysql = require('mysql2');
 //variabels que se encargan de conectarse a los modulos de routes
 var indexRouter = require('./routes/findex');
 var usersRouter = require('./routes/users');
-
+const PORT = process.env.PORT || 3000;
 //variabels que se encargan de conectarse a los modulos de routes
 var indexRouter = require('./routes/findex');
 var usersRouter = require('./routes/users');
@@ -64,9 +64,8 @@ app.get('/redire',function(req,res){
 })
 */
 
-server.listen(3000,()=>{
-    console.log('Server corriendo en http://192.168.100.91:3000')
-    
+server.listen(PORT,()=>{
+    console.log('el servidor esta listo en el purto'+ PORT )
 });
 
 app.use(logger('dev'));
